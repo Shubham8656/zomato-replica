@@ -1,2 +1,1 @@
-# zomato-replica
-Restaurant website using responsive design concept
+Project URL - https://shubham8656.github.io/zomato-replica/
