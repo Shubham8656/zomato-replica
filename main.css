@@ -1,77 +1,80 @@
+@use "./data";
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body .h-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
   width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body .h-container .header-left {
-  align-self: center;
+body .h-container .header-left .app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body .h-container .header-left .app li {
-  list-style-type: none;
+body .h-container .header-left .app a {
+  font-size: 130%;
   text-decoration: none;
-  font-size: 15px;
 }
 
 body .h-container .header-left .app img {
-  width: 20px;
-  vertical-align: middle;
+  width: 20%;
 }
 
-@media screen and (min-width: 376px) {
-  body .h-container .header-left {
-    margin-left: 20px;
-  }
-  body .h-container .header-left .app li {
-    list-style-type: none;
-    text-decoration: none;
-    font-size: 15px;
-  }
-  body .h-container .header-left .app img {
-    width: 25px;
-    vertical-align: middle;
-  }
-}
-
-body .h-container .header-right {
-  margin: 0px 0px 0px auto;
+body .h-container .header-right .order {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .h-container .header-right .order li {
-  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 130%;
   text-decoration: none;
-  font-size: 15px;
-  margin: 0px 0px 0px 10px;
+}
+
+body .h-container .header-right .order li a {
+  text-decoration: none;
 }
 
 body .h-container .header-right .order img {
-  width: 20px;
-  vertical-align: middle;
+  width: 20%;
 }
 
-@media screen and (min-width: 376px) {
-  body .h-container .header-right {
-    margin: 0px 0px 0px auto;
-  }
+@media screen and (max-width: 376px) {
   body .h-container .header-right .order {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-  }
-  body .h-container .header-right .order li {
-    list-style-type: none;
-    text-decoration: none;
-    font-size: 15px;
-  }
-  body .h-container .header-right .order img {
-    width: 25px;
-    vertical-align: middle;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -80,343 +83,423 @@ body .banner {
   background-color: rgba(0, 0, 0, 0.5);
   background-size: cover;
   background-position: center;
-  height: 400px;
-  position: absolute;
-  margin-top: 10px;
+  background-blend-mode: overlay;
 }
 
-body .banner .search-restaurant img {
-  width: 100px;
-  margin: 20px 125px auto 125px;
+body .banner .search-restaurant #logo {
+  width: 12%;
+  margin-left: 44%;
+  margin-top: 8%;
+  margin-bottom: 1%;
 }
 
 body .banner .search-restaurant p {
   font-size: 30px;
   text-align: center;
-  margin: 20px 10% 20px 10%;
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 5%;
   width: 80%;
   color: white;
 }
 
+body .banner .search-restaurant .search-cntr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 body .banner .search-restaurant .dropdown {
-  width: 300px;
-  margin: auto 10%;
+  width: 18%;
   height: 30px;
-  margin-bottom: 5px;
+  padding: 1%;
+  height: 40px;
+  font-size: 110%;
+  margin-bottom: 5%;
 }
 
 body .banner .search-restaurant #search-rest {
-  width: 300px;
-  margin: auto 10%;
+  width: 50%;
   height: 30px;
-  margin-bottom: 5px;
+  padding: 1%;
+  height: 40px;
+  font-size: 110%;
 }
 
 body .banner .search-restaurant #search-btn {
-  width: 300px;
-  margin: auto 10%;
-  height: 30px;
-  margin-bottom: 5px;
+  width: 15%;
+  height: 40px;
   background-color: #e23744;
   color: white;
   border: none;
+  font-size: 110%;
 }
 
-@media screen and (min-width: 376px) {
+@media screen and (max-width: 376px) {
   body .banner {
     background-image: url("zomato/bg.jpg");
-    background-color: rgba(0, 0, 0, 0.5);
     background-size: cover;
-    height: 500px;
-    position: relative;
+    background-blend-mode: overlay;
+    height: 400px;
   }
   body .banner .search-restaurant {
-    margin: 0px auto auto auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  body .banner .search-restaurant img {
-    width: 10%;
-    margin: 60px 40% auto 40%;
+  body .banner .search-restaurant #logo {
+    width: 20%;
+    margin: auto;
+    margin-top: 10%;
   }
   body .banner .search-restaurant p {
-    font-size: 40px;
+    font-size: 180%;
     text-align: center;
     margin: 30px 10% 20px 10%;
     width: 80%;
+    color: whitesmoke;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  body .banner .search-restaurant .search-cntr {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 30px;
+    margin-top: 10%;
+    margin-bottom: 3%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .banner .search-restaurant .search-cntr .dropdown {
+    width: 100%;
+    font-size: 100%;
+    padding: 2%;
+    margin-bottom: 3%;
+  }
+  body .banner .search-restaurant .search-cntr #search-rest {
+    width: 100%;
+    font-size: 90%;
+    padding: 2%;
+    margin-bottom: 3%;
+  }
+  body .banner .search-restaurant .search-cntr #search-btn {
+    width: 100%;
+    background-color: #ec4444;
+    padding: 2%;
     color: white;
-  }
-  body .banner .search-restaurant .dropdown {
-    height: 50px;
-    display: inline-block;
-    width: 15%;
-    margin: 50px 10px auto 60px;
-  }
-  body .banner .search-restaurant .dropdown #drop {
-    max-width: 100%;
-    font-size: 40px;
-  }
-  body .banner .search-restaurant #search-rest {
-    height: 50px;
-    display: inline-block;
-    position: absolute;
-    margin: 50px 20px auto 0px;
-    width: 1000px;
-  }
-  body .banner .search-restaurant #search-btn {
-    height: 50px;
-    display: inline-block;
-    position: absolute;
-    margin: 50px 20px auto 1010px;
-    width: 100px;
-    background-color: #e23744;
-    color: white;
+    font-size: 120%;
   }
 }
 
 body .bg-grey {
-  position: absolute;
-  display: block;
-  margin: 400px 0px auto 0px;
-  background-color: #f4f0e9;
-  height: 1900px;
+  background-color: #ccc7c7;
+  margin-top: 0%;
+}
+
+body .bg-grey .zomaland {
+  width: 60%;
 }
 
 body .bg-grey .zomaland img {
-  display: none;
+  width: 100%;
+  margin-top: 10%;
+  margin-left: 5%;
 }
 
 body .bg-grey .collections {
-  position: relative;
-  margin: 10px 7.5px auto 7.5px;
+  width: 60%;
+  margin-left: 2.5%;
+}
+
+body .bg-grey .collections .written-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .bg-grey .collections .written-content h1 {
+  margin-bottom: 0%;
 }
 
 body .bg-grey .collections .written-content p {
-  font-size: 20px;
+  font-size: 110%;
+  margin-top: 0%;
 }
 
-body .bg-grey .collections .card-1 {
+body .bg-grey .collections .card-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  grid-gap: 3%;
+}
+
+body .bg-grey .collections .card-container .card-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  margin-bottom: 2px;
 }
 
-body .bg-grey .collections .card-1 .photo {
-  position: relative;
-  width: 150px;
-  height: 170px;
+body .bg-grey .collections .card-container .card-1 .photo {
+  height: 100%;
+  width: 50%;
 }
 
-body .bg-grey .collections .card-1 .photo img {
-  position: absolute;
-  width: 150px;
-  height: 170px;
+body .bg-grey .collections .card-container .card-1 .photo img {
+  width: 100%;
 }
 
-body .bg-grey .collections .card-1 .photo-content {
-  position: absolute;
+body .bg-grey .collections .card-container .card-1 .photo-content {
+  width: 90%;
+  padding: 2%;
+  height: 91%;
   background-color: white;
-  padding: 1px;
-  width: 200px;
-  margin: 0px auto 0px auto;
-  height: 170px;
-  left: 150px;
 }
 
-body .bg-grey .collections .card-1 .photo-content p {
-  font-size: 20px;
+body .bg-grey .collections .card-container .card-1 .photo-content h2 {
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
 
-body .bg-grey .collections .card-2 {
+body .bg-grey .collections .card-container .card-1 .photo-content p {
+  margin-top: 0%;
+}
+
+body .bg-grey .collections .card-container .card-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  margin-bottom: 2px;
 }
 
-body .bg-grey .collections .card-2 .photo {
-  position: relative;
-  width: 150px;
-  height: 170px;
+body .bg-grey .collections .card-container .card-2 .photo {
+  width: 50%;
 }
 
-body .bg-grey .collections .card-2 .photo img {
-  position: absolute;
-  width: 150px;
-  height: 170px;
+body .bg-grey .collections .card-container .card-2 .photo img {
+  width: 100%;
 }
 
-body .bg-grey .collections .card-2 .photo-content {
-  position: absolute;
+body .bg-grey .collections .card-container .card-2 .photo-content {
+  width: 90%;
+  padding: 2%;
   background-color: white;
-  padding: 1px;
-  width: 200px;
-  margin: 0px auto 0px auto;
-  height: 170px;
-  left: 150px;
+  height: 91%;
 }
 
-body .bg-grey .collections .card-2 .photo-content p {
-  font-size: 20px;
+body .bg-grey .collections .card-container .card-2 .photo-content h2 {
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
 
-body .bg-grey .collections .card-3 {
+body .bg-grey .collections .card-container .card-2 .photo-content p {
+  margin-top: 0%;
+}
+
+body .bg-grey .collections .card-container .card-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  margin-bottom: 2px;
 }
 
-body .bg-grey .collections .card-3 .photo {
-  position: relative;
-  width: 150px;
-  height: 170px;
+body .bg-grey .collections .card-container .card-3 .photo {
+  width: 50%;
 }
 
-body .bg-grey .collections .card-3 .photo img {
-  position: absolute;
-  width: 150px;
-  height: 170px;
+body .bg-grey .collections .card-container .card-3 .photo img {
+  width: 100%;
 }
 
-body .bg-grey .collections .card-3 .photo-content {
-  position: absolute;
+body .bg-grey .collections .card-container .card-3 .photo-content {
   background-color: white;
-  padding: 1px;
-  width: 200px;
-  margin: 0px auto 0px auto;
-  height: 170px;
-  left: 150px;
+  width: 90%;
+  height: 91%;
+  padding: 2%;
 }
 
-body .bg-grey .collections .card-3 .photo-content p {
-  font-size: 20px;
+body .bg-grey .collections .card-container .card-3 .photo-content h2 {
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
 
-body .bg-grey .collections .card-4 {
+body .bg-grey .collections .card-container .card-3 .photo-content p {
+  margin-top: 0%;
+}
+
+body .bg-grey .collections .card-container .card-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  margin-bottom: 2px;
 }
 
-body .bg-grey .collections .card-4 .photo {
-  position: relative;
-  width: 150px;
-  height: 170px;
+body .bg-grey .collections .card-container .card-4 .photo {
+  width: 50%;
 }
 
-body .bg-grey .collections .card-4 .photo img {
-  position: absolute;
-  width: 150px;
-  height: 170px;
+body .bg-grey .collections .card-container .card-4 .photo img {
+  width: 100%;
 }
 
-body .bg-grey .collections .card-4 .photo-content {
-  position: absolute;
+body .bg-grey .collections .card-container .card-4 .photo-content {
   background-color: white;
-  padding: 1px;
-  width: 200px;
-  margin: 0px auto 0px auto;
-  height: 170px;
-  left: 150px;
+  width: 90%;
+  height: 80%;
+  padding: 2%;
 }
 
-body .bg-grey .collections .card-4 .photo-content p {
-  font-size: 20px;
+body .bg-grey .collections .card-container .card-4 .photo-content h2 {
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
 
-body .bg-grey .order-food-online {
-  position: relative;
-  margin: 0px 7.5px auto 7.5px;
+body .bg-grey .collections .card-container .card-4 .photo-content p {
+  margin-top: 0%;
 }
 
-body .bg-grey .widget {
-  position: relative;
-  margin: 10px 7.5px auto 7.5px;
+body .bg-grey .order-container {
+  width: 30%;
+  position: absolute;
+  top: 95%;
+  right: 3%;
+}
+
+body .bg-grey .order-container .order-food-online {
+  padding: 0%;
+}
+
+body .bg-grey .order-container .order-food-online h1 {
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+body .bg-grey .order-container .order-food-online p {
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+body .bg-grey .order-container .widget {
   background-color: white;
-  height: 400px;
+  width: 100%;
+  height: 300px;
+  margin-top: 0%;
 }
 
-body .bg-grey .widget p {
-  font-size: 20px;
-  text-align: center;
-  color: green;
-  margin-top: 50px;
+body .bg-grey .order-container .widget h4 {
+  padding: 2%;
+  font-size: 130%;
 }
 
-body .bg-grey .widget h4 {
-  padding: 10px;
-  font-size: 20px;
-  height: 20px;
-}
-
-body .bg-grey .widget .search-del {
+body .bg-grey .order-container .widget .search-del {
   margin-left: 10px;
-  width: 280px;
+  width: 70%;
+  font-size: 100%;
   height: 40px;
 }
 
-body .bg-grey .widget .detect-btn {
+body .bg-grey .order-container .widget .detect-btn {
   height: 40px;
-  background-color: white;
+  width: 20%;
+  font-size: 100%;
 }
 
-body .bg-grey .widget .order-btn {
+body .bg-grey .order-container .widget .order-btn {
   margin: 15px auto 10px 10px;
-  width: 340px;
+  width: 90%;
   height: 40px;
   background-color: green;
   color: white;
   font-size: 20px;
 }
 
-body .bg-grey .categories {
-  position: relative;
-  margin-top: 10px;
+body .bg-grey .order-container .widget p {
+  padding: 2%;
+  margin-top: 5%;
+  margin-bottom: 15%;
 }
 
-body .bg-grey .categories .quick-search {
-  margin: 0 auto auto 10px;
-  position: absolute;
-  left: 0px;
+body .bg-grey .categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3%;
+  width: 100%;
 }
 
 body .bg-grey .categories .quick-search #cat-title, body .bg-grey .categories .quick-search #cat-subtitle {
   line-height: 0.1;
 }
 
-body .bg-grey .categories .quick-search ul.category-list {
-  position: absolute;
-  font-size: 10px;
-  width: 350px;
-  height: 80px;
-  left: 0px;
+body .bg-grey .categories .quick-search .category-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  padding: 2%;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+body .bg-grey .categories .quick-search .category-list #item-card {
+  margin-right: 1%;
+}
+
+body .bg-grey .categories .quick-search .category-list li {
+  margin-top: 1%;
   text-decoration: none;
   list-style-type: none;
-  display: contents;
+  margin-left: 5%;
 }
 
-body .bg-grey .categories .quick-search ul.category-list .list-1 {
-  display: flex;
-  margin-top: 30px;
-  flex-flow: row;
-  margin-bottom: 20px;
-}
-
-body .bg-grey .categories .quick-search ul.category-list .list-2 {
-  display: flex;
-  flex-flow: row;
-}
-
-body .bg-grey .categories .quick-search ul.category-list img {
-  width: 40px;
+body .bg-grey .categories .quick-search .category-list img {
+  width: 50%;
 }
 
 body .bg-grey .localities {
-  margin: 210px 10px auto 10px;
+  padding: 3%;
 }
 
 body .bg-grey .localities #loc-subtitle {
   color: grey;
+  margin-top: -1%;
 }
 
 body .bg-grey .localities .locality-list {
+  padding: 1%;
   background-color: white;
   list-style-type: none;
 }
@@ -425,41 +508,40 @@ body .bg-grey .localities .locality-list li {
   margin-left: 0px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 body footer {
-  background-color: black;
+  background-color: #161515;
   color: grey;
-  display: block;
-  position: absolute;
-  margin: 2300px 0px auto 0px;
-  width: 365px;
+  width: 100%;
+  padding: 3%;
 }
 
 body footer img {
-  width: 90px;
-  padding: 10px;
+  width: 8%;
 }
 
 body footer select {
   background-color: black;
   color: white;
   float: right;
-  margin: 30px 10px auto auto;
-  width: 200px;
-  height: 30px;
+  width: 20%;
+  height: 35px;
 }
 
 body footer .footer-wrapper {
-  margin: 0px auto 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   list-style-type: none;
   line-height: 0.5;
-}
-
-body footer .footer-wrapper .about-zomato {
-  margin-top: 20px;
-  display: inline-block;
+  margin-top: 3%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 body footer .footer-wrapper .about-zomato li {
@@ -471,11 +553,6 @@ body footer .footer-wrapper .about-zomato p {
   font-size: 15px;
 }
 
-body footer .footer-wrapper .foodies {
-  float: right;
-  margin: 20px 10px auto auto;
-}
-
 body footer .footer-wrapper .foodies li {
   font-size: 25px;
   margin-bottom: 20px;
@@ -483,11 +560,6 @@ body footer .footer-wrapper .foodies li {
 
 body footer .footer-wrapper .foodies p {
   font-size: 15px;
-}
-
-body footer .footer-wrapper .restaurants {
-  margin-top: 20px;
-  display: block;
 }
 
 body footer .footer-wrapper .restaurants li {
@@ -499,275 +571,121 @@ body footer .footer-wrapper .restaurants p {
   font-size: 15px;
 }
 
-@media screen and (min-width: 376px) {
+@media screen and (max-width: 376px) {
   body .bg-grey {
-    position: relative;
-    display: block;
-    margin-top: 0px;
-    background-color: #f4f0e9;
-    height: 1400px;
+    background-color: #c7c0c0;
     width: 100%;
   }
   body .bg-grey .zomaland {
-    height: 400px;
-    width: 500px;
-  }
-  body .bg-grey .zomaland img {
-    display: block;
-    position: absolute;
-    width: 60%;
-    height: 300px;
-    margin: 50px auto auto 40px;
+    display: none;
   }
   body .bg-grey .collections {
-    position: absolute;
-    margin: 350px 0px auto 40px;
-    width: 60%;
-    background-size: cover;
-    height: 300px;
-    top: 10px;
-    line-height: 0.5;
+    width: 100%;
+  }
+  body .bg-grey .collections .written-content {
+    width: 100%;
   }
   body .bg-grey .collections .written-content p {
-    font-size: 20px;
-    line-height: 0.1;
-  }
-  body .bg-grey .collections .row-1 {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-  }
-  body .bg-grey .collections .row-1 .card-1 {
-    width: 350px;
-    display: inline-block;
-    margin-bottom: 2px;
-  }
-  body .bg-grey .collections .row-1 .card-1 .photo {
-    display: inline-block;
-  }
-  body .bg-grey .collections .row-1 .card-1 .photo img {
-    width: 150px;
-    height: 150px;
-  }
-  body .bg-grey .collections .row-1 .card-1 .photo-content {
-    width: 270px;
-    display: inline-block;
-    background-color: white;
-    height: 150px;
-    line-height: 0.3;
-  }
-  body .bg-grey .collections .row-1 .card-1 .photo-content p {
-    font-size: 20px;
     line-height: 1;
   }
-  body .bg-grey .collections .row-1 .card-2 {
-    width: 350px;
+  body .bg-grey .collections .card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    margin-bottom: 2px;
-    margin-left: 120px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  body .bg-grey .collections .row-1 .card-2 .photo img {
-    width: 150px;
-    height: 150px;
-  }
-  body .bg-grey .collections .row-1 .card-2 .photo-content {
-    line-height: 0.3;
-    margin-left: 470px;
-    width: 270px;
-    background-color: white;
-    height: 150px;
-  }
-  body .bg-grey .collections .row-1 .card-2 .photo-content p {
-    font-size: 20px;
-    line-height: 1;
-  }
-  body .bg-grey .collections .row-2 {
-    position: relative;
+  body .bg-grey .collections .card-container .card-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    width: 100%;
+    margin-bottom: 3%;
   }
-  body .bg-grey .collections .row-2 .card-3 {
-    width: 350px;
-    display: inline-block;
-    margin-bottom: 2px;
+  body .bg-grey .collections .card-container .card-1 .photo {
+    width: 35%;
   }
-  body .bg-grey .collections .row-2 .card-3 .photo {
-    display: inline-block;
+  body .bg-grey .collections .card-container .card-1 .photo img {
+    height: 120px;
   }
-  body .bg-grey .collections .row-2 .card-3 .photo img {
-    width: 150px;
-    height: 150px;
+  body .bg-grey .collections .card-container .card-1 .photo-content {
+    width: 60%;
+    padding: 2%;
+    height: 120px;
   }
-  body .bg-grey .collections .row-2 .card-3 .photo-content {
-    width: 270px;
-    display: inline-block;
-    background-color: white;
-    height: 150px;
-    line-height: 0.3;
-  }
-  body .bg-grey .collections .row-2 .card-3 .photo-content p {
-    font-size: 20px;
-    line-height: 1;
-  }
-  body .bg-grey .collections .row-2 .card-4 {
-    width: 350px;
+  body .bg-grey .collections .card-container .card-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    margin-bottom: 2px;
-    margin-left: 120px;
+    width: 100%;
+    margin-bottom: 3%;
   }
-  body .bg-grey .collections .row-2 .card-4 .photo img {
-    width: 150px;
-    height: 150px;
+  body .bg-grey .collections .card-container .card-2 .photo {
+    width: 35%;
   }
-  body .bg-grey .collections .row-2 .card-4 .photo-content {
-    line-height: 0.3;
-    margin-left: 470px;
-    width: 270px;
-    background-color: white;
-    height: 150px;
+  body .bg-grey .collections .card-container .card-2 .photo img {
+    height: 120px;
   }
-  body .bg-grey .collections .row-2 .card-4 .photo-content p {
-    font-size: 20px;
-    line-height: 1;
+  body .bg-grey .collections .card-container .card-2 .photo-content {
+    width: 60%;
+    padding: 2%;
+    height: 120px;
   }
-  body .bg-grey .order-food-online {
-    position: absolute;
-    margin-top: 30px;
-    top: 10px;
-    right: 210px;
-    line-height: 0.3;
-  }
-  body .bg-grey .widget {
-    position: absolute;
-    width: 30%;
-    top: 100px;
-    right: 50px;
-    background-color: white;
-  }
-  body .bg-grey .widget p {
-    font-size: 20px;
-    text-align: center;
-    color: green;
-    margin-top: 50px;
-  }
-  body .bg-grey .widget h4 {
-    margin-top: 5px;
-    padding: 10px;
-    font-size: 20px;
-    height: 20px;
-  }
-  body .bg-grey .widget .search-del {
-    margin-left: 10px;
-    width: 350px;
-    height: 40px;
-  }
-  body .bg-grey .widget .detect-btn {
-    height: 40px;
-    background-color: white;
-  }
-  body .bg-grey .widget .order-btn {
-    margin: 15px auto 10px 10px;
-    width: 410px;
-    height: 40px;
-    background-color: green;
-    color: white;
-    font-size: 20px;
-  }
-  body .bg-grey .categories {
-    position: relative;
-    margin-top: 10px;
-  }
-  body .bg-grey .categories .quick-search {
-    margin: 400px auto auto 40px;
-    position: absolute;
-    left: 0px;
-  }
-  body .bg-grey .categories .quick-search #cat-title, body .bg-grey .categories .quick-search #cat-subtitle {
-    line-height: 0.1;
-  }
-  body .bg-grey .categories .quick-search ul.category-list {
-    position: absolute;
-    left: 0px;
-    text-decoration: none;
-    list-style-type: none;
-    font-size: 20px;
-  }
-  body .bg-grey .categories .quick-search ul.category-list .list-1 {
-    display: inline-flex;
-  }
-  body .bg-grey .categories .quick-search ul.category-list .list-2 {
-    display: inline-flex;
-  }
-  body .bg-grey .categories .quick-search ul.category-list img {
-    width: 80px;
-  }
-  body .bg-grey .localities {
-    margin: 630px 10px auto 50px;
-  }
-  body .bg-grey .localities #loc-subtitle {
-    color: grey;
-    line-height: 0.1;
-  }
-  body .bg-grey .localities .locality-list {
-    margin-top: 30px;
-    background-color: white;
-    list-style-type: none;
-  }
-  body .bg-grey .localities .locality-list li {
-    margin-left: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    line-height: 1.8;
-  }
-  body footer {
-    background-color: black;
-    color: grey;
-    position: absolute;
-    margin: 0px 0px auto 0px;
-    width: 1485px;
-  }
-  body footer img {
-    width: 150px;
-    padding: 40px;
-  }
-  body footer select {
-    background-color: black;
-    color: white;
-    float: right;
-    margin: 30px 40px auto auto;
-    width: 200px;
-    height: 30px;
-  }
-  body footer .footer-wrapper {
-    margin: 10px 40px 20px 40px;
-    list-style-type: none;
-    line-height: 0.5;
+  body .bg-grey .collections .card-container .card-3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    width: 100%;
+    margin-bottom: 3%;
   }
-  body footer .footer-wrapper .about-zomato {
-    margin-right: 200px;
+  body .bg-grey .collections .card-container .card-3 .photo {
+    width: 35%;
   }
-  body footer .footer-wrapper .foodies {
-    margin-left: 20px;
-    margin-right: 200px;
+  body .bg-grey .collections .card-container .card-3 .photo img {
+    height: 120px;
   }
-  body footer .footer-wrapper .restaurants {
-    margin-left: 20px;
-    margin-right: 200px;
+  body .bg-grey .collections .card-container .card-3 .photo-content {
+    width: 60%;
+    padding: 2%;
+    height: 120px;
   }
-  body footer .footer-wrapper .countries {
-    margin-top: 20px;
-    margin-right: 200px;
-    margin-left: 20px;
+  body .bg-grey .collections .card-container .card-4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
   }
-  body footer .footer-wrapper .countries li {
-    font-size: 30px;
-    margin-bottom: 20px;
+  body .bg-grey .collections .card-container .card-4 .photo {
+    width: 35%;
+  }
+  body .bg-grey .collections .card-container .card-4 .photo img {
+    height: 120px;
+  }
+  body .bg-grey .collections .card-container .card-4 .photo-content {
+    width: 60%;
+    padding: 2%;
+    height: 120px;
+  }
+  body .bg-grey .order-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 2%;
+    margin-top: 2%;
+    width: 100%;
+    position: static;
+  }
+  body .bg-grey .order-container .order-food-online {
+    font-size: 120%;
   }
 }
- 
-
- /*# sourceMappingURL= main.css.map */
+/*# sourceMappingURL=main.css.map */
