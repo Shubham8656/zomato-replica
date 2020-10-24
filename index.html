@@ -17,8 +17,8 @@
         
             <div class="header-right">
                     <div class="order">
-                        <li><img src="zomato/order-online.svg"><a href="#" id="nav_item_1">Order Food</a></li>
-                        <li><img src="zomato/book-a-table.svg"><a href="#" id="nav_item_2">Book a Table</a></li>
+                        <li><img src="zomato/order-online.svg"><a href="#" id="nav_item_1">Order Food</a></li> 
+                        <li><img src="zomato/book-a-table.svg"><a href="#" id="nav_item_2">Book a Table</a></li> 
                         <li><img src="zomato/gold.svg"><a href="#" id="nav_item_3">Zomato Gold</a></li>
                     </div> 
             </div>
@@ -27,15 +27,15 @@
           
         <section class="banner">
             <div class="search-restaurant">
-
                 <img src="zomato/logo.svg" id="logo">
                 <p >Find the best restaurants, cafés, and bars in Mumbai</p>
-                <select class="dropdown">
+                <div class="search-cntr">
+                    <select class="dropdown">
                     <option id="drop">Mumbai</option>
-                </select>
-                <input id="search-rest" type="text" placeholder= "Search for restaurants or cuisines...">
-                <button id="search-btn">Search</button> 
-                
+                    </select>
+                    <input id="search-rest" type="text" placeholder= "Search for restaurants or cuisines...">
+                    <button id="search-btn">Search</button> 
+                </div>
             </div>
         </section>
 
@@ -54,7 +54,7 @@
                     </p>
                 </div>
 
-                <div class="row-1">
+                <div class="card-container">
 
                     <div class="card-1">
                         <div class="photo">
@@ -81,46 +81,41 @@
                             </div>
                         
                     </div>
+                
+                    <div class="card-3">
+                        <div class="photo">
+                            <img src="zomato/open.jpg">
+                        </div>
+                        <div class="photo-content">
+                            <h2>Newly Opened</h2>
+                            <p>
+                                The best new places in town
+                            </p>
+                        </div>
+                    </div>
                     
+                    <div class="card-4">
+                        <div class="photo">
+                            <img src="zomato/surecrisp.jpeg">
+                        </div>
+                        <div class="photo-content">
+                            <h2>SureCrisp Quick Fries</h2>
+                            <p>
+                                Turn up the flavour by ordering SureCrisp fries
+                            </p>
+                        </div>
+                    </div>                
                 </div>  
-                 
-                <div class="row-2">
-
-                <div class="card-3">
-                    <div class="photo">
-                        <img src="zomato/open.jpg">
-                    </div>
-                    <div class="photo-content">
-                        <h2>Newly Opened</h2>
-                        <p>
-                            The best new places in town
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="card-4">
-                    <div class="photo">
-                        <img src="zomato/surecrisp.jpeg">
-                    </div>
-                    <div class="photo-content">
-                        <h2>SureCrisp Quick Fries</h2>
-                        <p>
-                            Turn up the flavour by ordering SureCrisp fries
-                        </p>
-                    </div>
-                </div>
-                
-            </div>  
                 
             </div>
 
-            <div class="order-food-online">
-                <h1>Order Food Online</h1>
-                <p>Best restaurants delivering to your doorstep</p>
-            </div>
+            <div class="order-container">
+                <div class="order-food-online">
+                    <h1>Order Food Online</h1>
+                    <p>Best restaurants delivering to your doorstep</p>
+                </div>
             
-                <div class="widget">
-                        
+                <div class="widget">      
                     <h4>Enter your delivery location</h4>
                     <input class="search-del" type="text" placeholder= "Type delivery location here">
                     <button class="detect-btn">Detect</button>
@@ -129,30 +124,23 @@
                     <hr/>
                     <p> Use code <strong>ZOMATO</strong> to get up to 50% OFF. T&Cs apply.</p>
                 </div>
-
+            </div>
 
             <section class="categories">
 
                 <div class="quick-search">
-                    
                     <h2 id="cat-title">Quick Searches</h2>
                     <p id="cat-subtitle">Discover restaurants by type of meal</p>
-                    <ul class="category-list">
-                        <div class="list-1">
-                            <img src="zomato/delivery.png"><br>
-                            <li> Delivery</li>
-                            <img src="zomato/pocket-friendly-delivery.png"><li>  Pocket-Friendly Delivery</li>
-                            <img src="zomato/breakfast.png"><li>  Breakfast</li>
-                            <img src="zomato/lunch.png"><li>  Lunch</li>
-                        </div>
-                            <div class="list-2">
-                            <img src="zomato/dinner.png"><li>  Dinner</li>
-                            <img src="zomato/drinks.png"><li>  Drinks & Nightlife</li>
-                            <img src="zomato/cafes.png"><li>  Cafes</li>
-                            <img src="zomato/desserts.png"><li>  Desserts & Bakes</li>
-                        </div>
-                    </ul>
-
+                    <div class="category-list">
+                            <div id='item-card'><img src="zomato/delivery.png"><li>Delivery</li></div>
+                            <div id='item-card'><img src="zomato/pocket-friendly-delivery.png"><li>Pocket-Friendly Delivery</li></div>
+                            <div id='item-card'><img src="zomato/breakfast.png"><li>Breakfast</li></div>
+                            <div id='item-card'><img src="zomato/lunch.png"><li>Lunch</li></div>
+                            <div id='item-card'><img src="zomato/dinner.png"><li>Dinner</li></div>
+                            <div id='item-card'><img src="zomato/drinks.png"><li>Drinks & Nightlife</li></div>
+                            <div id='item-card'><img src="zomato/cafes.png"><li>Cafes</li></div>
+                            <div id='item-card'><img src="zomato/desserts.png"><li>Desserts & Bakes</li></div>
+                    </div>
                 </div>
                 
             </section>
@@ -162,7 +150,7 @@
 
                 <h2 id="loc-title">Popular localities in and around Mumbai</h2>
                 <p id="loc-subtitle">Explore restaurants, bars, and cafés by locality</p>
-                <ul class="locality-list">
+                <div class="locality-list">
                     <li>Marine drive</li>
                     <li>Hojiari</li>
                     <li>Bale</li>
@@ -173,8 +161,7 @@
                     <li>Tilak chowk</li>
                     <li>Laxmi nagar</li>
                     <li>Khed</li>
-
-                </ul>
+                </div>
 
             </section>
 
